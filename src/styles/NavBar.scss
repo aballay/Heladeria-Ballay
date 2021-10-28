@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "MerriweatherSans-Medium";
+    src: url(../fonts/MerriweatherSans-Medium.ttf)
+}
+
+$palette-ice-one:#78061c;
+$palette-ice-two:#b93546;
+$palette-ice-three:#e690a0;
+$palette-ice-four:#6d5f75;
+$palette-ice-five:#313033;
+
+$font-mws-medium: "MerriweatherSans-Medium";
+
+
+
+
+.navbar-general
+{
+    background-color: $palette-ice-one;
+}
+.navbar-container
+{
+    color:$palette-ice-five;
+    font-family: $font-mws-medium;
+}
+.logo-container
+{
+width: 3vw;
+}
+.logo-text
+{
+    font-size: 1.5vw;
+    color:white;
+    font-family: $font-mws-medium;
+}

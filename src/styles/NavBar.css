@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "MerriweatherSans-Medium";
+  src: url(../fonts/MerriweatherSans-Medium.ttf);
+}
+
+.navbar-general {
+  background-color: #78061c;
+}
+
+.navbar-container {
+  color: #313033;
+  font-family: "MerriweatherSans-Medium";
+}
+
+.logo-container {
+  width: 3vw;
+}
+
+.logo-text {
+  font-size: 1.5vw;
+  color: white;
+  font-family: "MerriweatherSans-Medium";
+}
+/*# sourceMappingURL=NavBar.css.map */
