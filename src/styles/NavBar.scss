@@ -2,16 +2,18 @@
     font-family: "MerriweatherSans-Medium";
     src: url(../fonts/MerriweatherSans-Medium.ttf)
 }
-
-$palette-ice-one:#78061c;
+/*Paleta de colores */
+/* https://www.color-hex.com/color-palettes/ */
+/**/
+$palette-ice-one:#78061d;
 $palette-ice-two:#b93546;
 $palette-ice-three:#e690a0;
 $palette-ice-four:#6d5f75;
 $palette-ice-five:#313033;
 
+$pallete-ice-one-press:#640619;
+/* font */
 $font-mws-medium: "MerriweatherSans-Medium";
-
-
 
 
 .navbar-general
@@ -23,9 +25,8 @@ $font-mws-medium: "MerriweatherSans-Medium";
     color:$palette-ice-five;
     font-family: $font-mws-medium;
 }
-.logo-container
-{
-width: 3vw;
+#icon-fa-ice-cream{
+    margin-right:0.5vw;
 }
 .logo-text
 {
@@ -33,3 +34,39 @@ width: 3vw;
     color:white;
     font-family: $font-mws-medium;
 }
+/*color texto items menu */
+.navbar-dark .navbar-nav .nav-link
+{
+    color:#FFFFFF8C
+}
+/*color texto items menu al pasar por encima */
+ .navbar-dark .navbar-nav .nav-link:hover{
+    color:white !important;
+}
+/*color texto items menu al estar presionado*/
+.navbar-dark .navbar-nav .nav-link:focus{
+    color:white !important;
+}
+
+/*color texto dropdown menu al pasar por encima */
+.dropdown-menu-dark .dropdown-item:hover
+{
+    color:white !important;
+}
+/*color texto dropdown menu al estar presionado */
+.dropdown-menu-dark .dropdown-item:focus
+{
+    color:white !important;
+}
+/* DropDown lista productos */
+.dropdown-menu-dark
+{
+    background-color: $palette-ice-one!important;
+}
+/* DropDown Item Productos al clickear */
+.dropdown-menu-dark .dropdown-item:active {
+    background-color: $pallete-ice-one-press !important;
+    
+}
+
+
