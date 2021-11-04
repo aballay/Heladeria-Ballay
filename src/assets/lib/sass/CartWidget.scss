@@ -1,0 +1,53 @@
+
+$palette-ice-one:#78061d;
+$palette-ice-two:#b93546;
+$palette-ice-three:#e690a0;
+$palette-ice-four:#6d5f75;
+$palette-ice-five:#313033;
+
+$pallete-ice-one-press:#640619;
+
+$palette-ice-two-two:#FFFFFF8C;
+/* font */
+$font-mws-medium: "MerriweatherSans-Medium";
+
+.container-icon-cart-widget{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+#icon-fa-shopping-basket
+{
+    position: relative;   
+    z-index: 50; 
+    color:white;
+    font-size: 1.5rem;
+}
+
+#cart-size-notificacion-container{
+    width: 45%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    z-index: 51;
+    background-color:$palette-ice-three;
+    border-radius: 2rem;;
+    opacity: 0.9;
+
+
+}
+.cart-size-notification
+{
+    display: flex;
+    align-items: center;
+    color:white;
+    font-family:$font-mws-medium ;
+    font-size: 0.8rem;
+}
