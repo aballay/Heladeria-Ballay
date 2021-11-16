@@ -1,0 +1,67 @@
+.cardText {
+  height: 8vh !important;
+  font-size: 1.6vh;
+  text-align: -webkit-center;
+}
+
+#card-body-container {
+  height: 14vh;
+}
+
+.cardText {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card-group-containter-dinamyc {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.card-individual-container {
+  margin-bottom: 10vh;
+  border-radius: 2em !important;
+}
+
+.container-button-add-cart {
+  width: 100%;
+}
+
+.button-add-cart {
+  width: 100%;
+  height: 4vh;
+  background-color: #78061d;
+  border-style: none;
+  border-radius: 2em;
+  color: white;
+  font-size: 1.5vh;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 0;
+}
+
+.button-add-cart :hover {
+  background-color: #640619;
+  font-size: 1.51vh;
+}
+
+.button-add-cart :active {
+  background-color: #b93546;
+  font-size: 1.53vh;
+}
+
+.text-btn-add-cart {
+  height: 100%;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 2100px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 2099px !important;
+  }
+}
+
+/*# sourceMappingURL=Cards.css.map */

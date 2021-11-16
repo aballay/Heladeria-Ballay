@@ -1,0 +1,55 @@
+
+$palette-ice-one:#78061d;
+$palette-ice-two:#b93546;
+$palette-ice-three:#e690a0;
+$palette-ice-four:#6d5f75;
+$palette-ice-five:#313033;
+
+$pallete-ice-one-press:#640619;
+
+$palette-ice-two-two:#FFFFFF8C;
+/* font */
+$font-mws-medium: "MerriweatherSans-Medium";
+
+.containerAddToCartWidget{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnCartWidget 
+{
+width: 5vh;
+font-family: $font-mws-medium;
+border-radius: 5em;
+border-color:$palette-ice-one ;
+border-style: none;
+background-color:white ;
+font-size: 3vh;
+color:$palette-ice-one;
+}
+.btnCartWidget :hover{
+    color:$palette-ice-three;
+}
+.btnCartWidget :active{
+    color:$pallete-ice-one-press;
+}
+.card-container-component{
+    
+}
+.container-unit
+{
+display: inline-flex;
+}
+#unit-number
+{
+    width: 1.6em;
+}
+
+.stlye-unit-text-u
+{
+    text-align: right;
+    font-family: $font-mws-medium;
+    font-size: 2vh;
+    align-self: flex-end;
+    padding-bottom: 0.50em;
+}

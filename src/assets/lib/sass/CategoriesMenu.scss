@@ -1,0 +1,129 @@
+
+$palette-ice-one:#78061d;
+$palette-ice-two:#b93546;
+$palette-ice-three:#e690a0;
+$palette-ice-four:#6d5f75;
+$palette-ice-five:#313033;
+
+$pallete-ice-one-press:#640619;
+
+$palette-ice-two-two:#FFFFFF8C;
+/* font */
+$font-mws-medium: "MerriweatherSans-Medium";
+
+.container-categories-menu
+{
+   width:60%;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.button-categories
+{
+    border-style: none;
+    border-radius: 2em;
+    width: 20vh;
+    height: 4.5vh;
+    background-color: $palette-ice-one;
+    color: white;
+    font-family: $font-mws-medium;
+}
+@media (min-width: 576px){
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 13vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+    }
+}
+@media (min-width: 800px){
+    .container-categories-menu
+    {
+        width: 75%;
+    }
+    
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 11vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+        font-size:1.3vh;
+    }
+}
+@media (min-width: 1110px){
+    .container-categories-menu
+    {
+        width: 60%
+    }
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 12vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+        font-size:1.5vh;
+    }
+}
+
+@media (min-width: 1366px){
+    .container-categories-menu
+    {
+        width: 60%
+    }
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 15vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+    }
+}
+
+@media (min-width: 1540px){
+    .container-categories-menu
+    {
+        width: 60%
+    }
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 17vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+    }
+}
+@media (min-width: 1900px){
+    .container-categories-menu
+    {
+        width: 60%
+    }
+    .button-categories
+    {
+        border-style: none;
+        border-radius: 2em;
+        width: 20vh;
+        height: 4.5vh;
+        background-color: $palette-ice-one;
+        color: white;
+        font-family: $font-mws-medium;
+    }
+}

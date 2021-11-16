@@ -5,7 +5,7 @@ class Catalog extends Component{
     constructor(props){
         super(props);
         this.state= {
-            name:'Mamen'
+            name:''
         }
     }
 

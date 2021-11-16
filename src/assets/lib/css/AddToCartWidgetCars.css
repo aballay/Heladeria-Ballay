@@ -1,0 +1,42 @@
+/* font */
+.containerAddToCartWidget {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnCartWidget {
+  width: 5vh;
+  font-family: "MerriweatherSans-Medium";
+  border-radius: 5em;
+  border-color: #78061d;
+  border-style: none;
+  background-color: white;
+  font-size: 3vh;
+  color: #78061d;
+}
+
+.btnCartWidget :hover {
+  color: #e690a0;
+}
+
+.btnCartWidget :active {
+  color: #640619;
+}
+
+.container-unit {
+  display: inline-flex;
+}
+
+#unit-number {
+  width: 1.6em;
+}
+
+.stlye-unit-text-u {
+  text-align: right;
+  font-family: "MerriweatherSans-Medium";
+  font-size: 2vh;
+  align-self: flex-end;
+  padding-bottom: 0.5em;
+}
+
+/*# sourceMappingURL=AddToCartWidgetCars.css.map */

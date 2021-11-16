@@ -4,7 +4,7 @@ const TitleComponent = ({name : nombre}) => {
    return(
     <div >
         <h1>
-            Hola {nombre}
+             {nombre}
         </h1>
     </div>
    );

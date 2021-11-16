@@ -1,0 +1,15 @@
+.row-separator-top {
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15vh;
+  display: contents;
+  align-items: center;
+}
+
+.legend-row-separator-top {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 5vh;
+}
+
+/*# sourceMappingURL=ItemListContainer.css.map */

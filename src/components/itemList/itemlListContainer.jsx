@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Cards from '../Cards/Cards';
+import '../../assets/lib/css/ItemListContainer.css'
 
 class ItemListContainer extends Component {
     constructor(props) {
@@ -8,17 +10,22 @@ class ItemListContainer extends Component {
         }
     
     }
-    handleAddToCart = () => {
-        this.props.countCartShop();            
-    }
-    handleQuitToCart = () => {
-        this.props.countCartShopDown();            
-    }
+    
     render() { 
         return (<div>
-            <h1>Agregar al carrito</h1>
-            <button onClick={this.handleAddToCart}> COMPRAR </button>
-            <button onClick={this.handleQuitToCart}> DESCOMPRAR </button>
+            <div className="row-separator-top">
+                <div className="legend-row-separator-top">
+                     Ofertas y promociones
+                </div>
+                
+                
+            </div>
+
+            <Cards  />
+
+
+
+           
         </div>  );
     }
 }

@@ -1,0 +1,109 @@
+/* font */
+.container-categories-menu {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-categories {
+  border-style: none;
+  border-radius: 2em;
+  width: 20vh;
+  height: 4.5vh;
+  background-color: #78061d;
+  color: white;
+  font-family: "MerriweatherSans-Medium";
+}
+
+@media (min-width: 576px) {
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 13vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+  }
+}
+@media (min-width: 800px) {
+  .container-categories-menu {
+    width: 75%;
+  }
+
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 11vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+    font-size: 1.3vh;
+  }
+}
+@media (min-width: 1110px) {
+  .container-categories-menu {
+    width: 60%;
+  }
+
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 12vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+    font-size: 1.5vh;
+  }
+}
+@media (min-width: 1366px) {
+  .container-categories-menu {
+    width: 60%;
+  }
+
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 15vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+  }
+}
+@media (min-width: 1540px) {
+  .container-categories-menu {
+    width: 60%;
+  }
+
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 17vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+  }
+}
+@media (min-width: 1900px) {
+  .container-categories-menu {
+    width: 60%;
+  }
+
+  .button-categories {
+    border-style: none;
+    border-radius: 2em;
+    width: 20vh;
+    height: 4.5vh;
+    background-color: #78061d;
+    color: white;
+    font-family: "MerriweatherSans-Medium";
+  }
+}
+
+/*# sourceMappingURL=CategoriesMenu.css.map */
