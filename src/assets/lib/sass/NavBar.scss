@@ -37,6 +37,12 @@ $font-mws-medium: "MerriweatherSans-Medium";
     font-family: $font-mws-medium;
 }
 /*color texto items menu */
+.item-navbar{
+    color:white !important;
+}
+.item-navbar :hover{
+    color:$palette-ice-three !important;
+}
 .navbar-dark .navbar-nav .nav-link
 {
     color:white !important;

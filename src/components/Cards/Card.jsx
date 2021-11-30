@@ -1,10 +1,10 @@
 import React, { Component,useState,setState } from 'react';
-
+import { Link } from "react-router-dom";
 import {Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import AddToCartWidget from "./AddToCart";
 import ButtonAddCart from "./ButtonAddCart"
 
-import "../../assets/lib/css/Cards.css";
+import "../../assets/lib/sass/Cards.scss";
 
 
 
@@ -24,7 +24,9 @@ function CardIndividual({handleAddToCart, imageSrc, title, description,stock }) 
   
   return (
     <Card className="card-individual-container"style={{ width: '30vh' }}>
-        <Card.Img variant="top" src={imageSrc} />
+         <Link className="item-navbar" style={{ textDecoration: 'none' }} to="/itemDetail">
+          <Card.Img variant="top" src={imageSrc} />
+        </Link>
         <Card.Body id="card-body-container">
             <Card.Title>{title}</Card.Title>
             <Card.Text className="cardText">

@@ -86,9 +86,22 @@ function Cards(props) {
   const [cards,setCards] = useState([]);
   
   useEffect(()=>{
-      new Promise((resp,reject) => setTimeout(resp(cardsData),10000))
-      .then(data => setCards(data))
+    handPromise
+    .then( (res) => {
+      console.log(res);
+      setCards(res)
+    } )
+    .catch( (bError) => {
+      alert( bError)
+    })
   },[])
+
+  const handPromise = new Promise((resolve,reject) => {
+    setTimeout(() => {
+      resolve(cardsData);
+      reject('Algo Fallo');
+    }, 2000);
+  })
   
   return (
     <div className="container d-flex justify-content-center align-items-center h-100">
@@ -96,10 +109,9 @@ function Cards(props) {
             {
               cards.map(({title,image,desc,id,stock}) => (
                 <div key={id}>
-                <CardIndividual className="card-container-component"
-                title={title} imageSrc={image} description={desc} id={id} stock={stock} />
+                    <CardIndividual className="card-container-component"
+                      title={title} imageSrc={image} description={desc} id={id} stock={stock} />
                 </div>
-              
             ))
              
             }

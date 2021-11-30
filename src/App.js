@@ -1,11 +1,9 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
-import Catalog from './components/catalog/catalog';
-import CategoriesMenu from './components/CategoriesMenu/CategoriesMenu';
 import React, { useState } from "react";
 import ItemListContainer from './components/itemList/itemlListContainer';
-import  PokeApiExample  from './components/Service/PokeApi';
-import PokeApiExampleAxios from './components/Service/PokeApi';
+import {BrowserRouter, Routes,Route} from 'react-router-dom'
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer'
 
 class App extends React.Component {
   constructor(props) {
@@ -23,13 +21,18 @@ class App extends React.Component {
 
   render() { 
     return ( 
+      <BrowserRouter>
     <div className="App">
-      
       <NavBar  cartSize={this.state.sizeCart}/>
-      <ItemListContainer />
-     
-      
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="aboutUs" element={ <h1> NOsotros</h1>} />
+          <Route path="contact" element={ <h1> Contacots</h1>} />
+          <Route path="itemDetail" element={<ItemDetailContainer />} />
+          
+        </Routes>
     </div>
+    </BrowserRouter>
   );
   }
 }

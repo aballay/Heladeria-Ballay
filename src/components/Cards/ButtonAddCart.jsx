@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../assets/lib/css/Cards.css'
+import '../../assets/lib/sass/Cards.scss'
 
 function ButtonAddCart(props) {
     return (

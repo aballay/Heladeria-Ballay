@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cards from '../Cards/Cards';
-import '../../assets/lib/css/ItemListContainer.css'
+import '../../assets/lib/sass/ItemListContainer.scss'
 
 class ItemListContainer extends Component {
     constructor(props) {
@@ -10,6 +10,8 @@ class ItemListContainer extends Component {
         }
     
     }
+
+    
     
     render() { 
         return (<div>

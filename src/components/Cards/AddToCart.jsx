@@ -1,5 +1,5 @@
 import React, { Component,useState,setState} from 'react';
-import '../../assets/lib/css/AddToCartWidgetCars.css'
+import '../../assets/lib/sass/AddToCartWidgetCars.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus,faMinus} from '@fortawesome/free-solid-svg-icons'
 
