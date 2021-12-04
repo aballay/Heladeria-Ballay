@@ -6,7 +6,7 @@ import { faIceCream } from '@fortawesome/free-solid-svg-icons'
 import CartWidget from './cartwidget/cartwidget';
 import { Link } from "react-router-dom";
 
-import React, {Component, useState } from "react";
+import React, {Component } from "react";
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -34,9 +34,17 @@ class NavBar extends Component {
                                     title="Productos"
                                     menuVariant="dark"
                                     >
-                                        <NavDropdown.Item className="item-feature" href="#catalog/mayoristas" >Mayoristas</NavDropdown.Item>
+                                        <NavDropdown.Item className="item-feature" >
+                                            <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/mayorista`}>
+                                            Mayoristas
+                                            </Link>
+                                            </NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item  className="item-feature"  href="#catalog/minoristas">Minoristas</NavDropdown.Item>
+                                        <NavDropdown.Item  className="item-feature" >
+                                            <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/minorista`}>
+                                            Minoristas
+                                            </Link>
+                                        </NavDropdown.Item>
                                     </NavDropdown>
                              </Nav>
     
@@ -46,7 +54,7 @@ class NavBar extends Component {
                         </Nav>
                     </Navbar.Collapse>
                     <div className="container-cart-widget">
-                        <CartWidget cartSize={this.props.cartSize}></CartWidget >
+                        <CartWidget sizeCart={this.props.sizeCart}></CartWidget >
                     </div>
                     
                 </Container>

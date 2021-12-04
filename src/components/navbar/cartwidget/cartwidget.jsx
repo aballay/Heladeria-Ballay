@@ -5,11 +5,9 @@ import '../../../assets/lib/sass/CartWidget.scss'
 function CartWidget (props) {
 
     const renderNotificationCartShop = () => {
-        (props.cartSize > 0) ? (
-          <div id="c art-size-notificacion-container">
-                    <div className="cart-size-notification">{props.cartSize}</div>
-                </div>
-        ):(  <div></div> )
+      return(<div id="c art-size-notificacion-container">
+      <div className="cart-size-notification">{props.sizeCart}</div>
+      </div>)
         }
       
     return (

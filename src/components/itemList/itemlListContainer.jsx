@@ -14,21 +14,16 @@ class ItemListContainer extends Component {
     
     
     render() { 
-        return (<div>
+        return (<React.Fragment>
             <div className="row-separator-top">
                 <div className="legend-row-separator-top">
                      Ofertas y promociones
                 </div>
                 
-                
             </div>
-
-            <Cards  />
-
-
-
-           
-        </div>  );
+            <Cards addItemsToCart={this.props.addItemsToCart} setItemsCount={this.props.setItemsCount} />
+        </React.Fragment>
+         );
     }
 }
  

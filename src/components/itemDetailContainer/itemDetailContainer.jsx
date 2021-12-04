@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import getItemDetail from '../Service/itemService';
 import ItemDetail from './itemDetail';
+import '../../assets/lib/sass/itemDetail.scss';
 
-function ItemDetailContainer() {
+function ItemDetailContainer(props) {
     const itemDefault = {
         id: 0,
         title: "No Disponible",
@@ -11,7 +12,9 @@ function ItemDetailContainer() {
        price: 0,
        stock:0,
       }
+
     const [itemDetail,setItemDetail] = useState(itemDefault);
+    
 
     useEffect(() => {
         getItemDetail
@@ -25,7 +28,7 @@ function ItemDetailContainer() {
 
     return ( <React.Fragment>
         <div className="item-detail-container">
-            <ItemDetail image={itemDetail.image} title={itemDetail.title} price={itemDetail.price} desc={itemDetail.desc}  />
+            <ItemDetail addItemsToCart={props.addItemsToCart} setItemsCount={props.setItemsCount} image={itemDetail.image} title={itemDetail.title} price={itemDetail.price} desc={itemDetail.desc}  />
         </div>
     </React.Fragment> );
 }

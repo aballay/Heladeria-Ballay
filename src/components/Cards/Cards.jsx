@@ -2,11 +2,8 @@ import React, {useEffect,useState} from "react";
 import CardIndividual from "./Card";
 import { CardGroup } from "react-bootstrap";
 
-
 import "../../assets/lib/css/Cards.css";
 
-const maxColumns = 4;
-let contador = 0;
 const cardsData = [
   {
     id: 1,
@@ -71,7 +68,7 @@ const cardsData = [
     
   },
   {
-    id: 1,
+    id: 9,
     title: "Promo Bariloche",
     image: 'https://raw.githubusercontent.com/FaztWeb/react-cards-bootstrap/main/src/assets/image3.jpg',
    desc: "Balde 3 litros + 6 chocolates bariloche",
@@ -104,12 +101,15 @@ function Cards(props) {
   })
   
   return (
+
+    
     <div className="container d-flex justify-content-center align-items-center h-100">
+      
         <CardGroup className="card-group-containter-dinamyc">
             {
               cards.map(({title,image,desc,id,stock}) => (
                 <div key={id}>
-                    <CardIndividual className="card-container-component"
+                    <CardIndividual  className="card-container-component" addItemsToCart = {props.addItemsToCart} setItemsCount={props.setItemsCount}
                       title={title} imageSrc={image} description={desc} id={id} stock={stock} />
                 </div>
             ))

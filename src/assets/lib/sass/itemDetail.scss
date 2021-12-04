@@ -1,0 +1,20 @@
+
+$palette-ice-one:#78061d;
+$palette-ice-two:#b93546;
+$palette-ice-three:#e690a0;
+$palette-ice-four:#6d5f75;
+$palette-ice-five:#313033;
+
+$pallete-ice-one-press:#640619;
+
+$palette-ice-two-two:#FFFFFF8C;
+
+.item-detail-container
+{
+    width: 50vh;
+}
+
+#root > div > div.item-detail-container > div > ul > li:nth-child(1) > img
+{
+    width: 50vh;
+}

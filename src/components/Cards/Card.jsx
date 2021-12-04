@@ -1,30 +1,37 @@
-import React, { Component,useState,setState } from 'react';
+import React, {useState }from 'react';
 import { Link } from "react-router-dom";
-import {Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import AddToCartWidget from "./AddToCart";
-import ButtonAddCart from "./ButtonAddCart"
+import {Card  } from "react-bootstrap";
+
+import ContainerAddToCart from "./ContainerAddToCart"
 
 import "../../assets/lib/sass/Cards.scss";
 
 
 
-function CardIndividual({handleAddToCart, imageSrc, title, description,stock }) {
-  const [itemCount, setCount] = useState(0);
+function CardIndividual({ addItemsToCart,setItemsCount,imageSrc, title, description,stock,id }) {
+  const [itemCount,setItemCount] = useState(0);
   
-  const handleAddAmountUnit = () => {
-    if(itemCount < stock){
-        setCount(itemCount + 1);           
+  function addItem() {
+    setItemCount(itemCount + 1);
+    setItemsCount(itemCount + 1);
+
+  }
+  function quitItem() {
+    if(itemCount>0){
+      setItemCount(itemCount - 1)
+      setItemsCount(itemCount - 1);
     }
   }
-  const handleQuitAmountUnit = () => {
-    if(itemCount > 0){
-        setCount(itemCount - 1);           
-    }
+
+  function resetItemCount()
+  {
+    setItemCount(0);
   }
   
+ 
   return (
     <Card className="card-individual-container"style={{ width: '30vh' }}>
-         <Link className="item-navbar" style={{ textDecoration: 'none' }} to="/itemDetail">
+         <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/item/${id}`}>
           <Card.Img variant="top" src={imageSrc} />
         </Link>
         <Card.Body id="card-body-container">
@@ -33,12 +40,8 @@ function CardIndividual({handleAddToCart, imageSrc, title, description,stock }) 
             {description}
             </Card.Text>
         </Card.Body>
-       
-        <Card.Body>
-          <AddToCartWidget amountUnit={itemCount} handleAddAmountUnit={handleAddAmountUnit} handleQuitAmountUnit={handleQuitAmountUnit}  />
-          
-        </Card.Body>
-        <ButtonAddCart  />
+        
+        <ContainerAddToCart resetItemCount={resetItemCount} addItemsToCart={addItemsToCart}addItem={addItem} quitItem={quitItem} itemCount={itemCount} />
         </Card>
   );
 }
