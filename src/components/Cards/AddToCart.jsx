@@ -6,6 +6,8 @@ import ItemCount from './itemCount';
 import ButtonCount from './buttonsCount';
 
 function AddToCartWidget(props) {
+    
+
     return ( 
         <div className="containerAddToCartWidget">
             

@@ -1,12 +1,14 @@
-import React from 'react';
-import '../../assets/lib/sass/Cards.scss'
+import React, {useContext} from 'react';
+import '../../assets/lib/sass/Cards.scss';
+import { CartContext } from "../../js/CartContex";
 
 function ButtonAddCart(props) {
+    const value = useContext(CartContext);
    
     return (
         <div className="container-button-add-cart">
             <button onClick={(event) => {
-                props.addItemsToCart();
+                value.addItemsToCart();
                 props.resetItemCount();
             }} className="button-add-cart">
                 <div className="text-btn-add-cart">

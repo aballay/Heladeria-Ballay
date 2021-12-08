@@ -1,25 +1,28 @@
-import React, {useState }from 'react';
+import React, {useState,useContext }from 'react';
 import { Link } from "react-router-dom";
 import {Card  } from "react-bootstrap";
-
+import { CartContext } from "../../js/CartContex";
 import ContainerAddToCart from "./ContainerAddToCart"
 
 import "../../assets/lib/sass/Cards.scss";
 
 
 
-function CardIndividual({ addItemsToCart,setItemsCount,imageSrc, title, description,stock,id }) {
+function CardIndividual({imageSrc, title, description,stock,id }) {
+  
+  const value = useContext(CartContext);
+
   const [itemCount,setItemCount] = useState(0);
   
   function addItem() {
     setItemCount(itemCount + 1);
-    setItemsCount(itemCount + 1);
+    value.setItemCounts(itemCount + 1);
 
   }
   function quitItem() {
     if(itemCount>0){
       setItemCount(itemCount - 1)
-      setItemsCount(itemCount - 1);
+      value.setItemCounts(itemCount - 1);
     }
   }
 
@@ -41,10 +44,10 @@ function CardIndividual({ addItemsToCart,setItemsCount,imageSrc, title, descript
             </Card.Text>
         </Card.Body>
         
-        <ContainerAddToCart resetItemCount={resetItemCount} addItemsToCart={addItemsToCart}addItem={addItem} quitItem={quitItem} itemCount={itemCount} />
+        <ContainerAddToCart resetItemCount={resetItemCount} addItem={addItem} quitItem={quitItem} itemCount={itemCount} />
         </Card>
   );
 }
-
+/*addItemsToCart={addItemsToCart}*/
 
 export default CardIndividual;

@@ -14,7 +14,7 @@ function ContainerAddToCart(props) {
           <AddToCartWidget  quitItem={props.quitItem} addItem={props.addItem} itemCount={props.itemCount} />
           
         </Card.Body>
-        <ButtonAddCart resetItemCount={props.resetItemCount} addItemsToCart={props.addItemsToCart} />
+        <ButtonAddCart resetItemCount={props.resetItemCount} />
 
     </React.Fragment> );
 }

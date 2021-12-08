@@ -1,30 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Cards from '../Cards/Cards';
 import '../../assets/lib/sass/ItemListContainer.scss'
 
-class ItemListContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  
 
-        }
-    
-    }
 
-    
-    
-    render() { 
-        return (<React.Fragment>
+
+const ItemListContainer= (props) => {
+   
+    return (
+        <React.Fragment>
             <div className="row-separator-top">
                 <div className="legend-row-separator-top">
                      Ofertas y promociones
                 </div>
                 
             </div>
-            <Cards addItemsToCart={this.props.addItemsToCart} setItemsCount={this.props.setItemsCount} />
-        </React.Fragment>
-         );
-    }
+            <Cards />
+        </React.Fragment>   
+
+      );
 }
- 
+
 export default ItemListContainer;
