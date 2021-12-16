@@ -34,17 +34,21 @@ class NavBar extends Component {
                                     title="Productos"
                                     menuVariant="dark"
                                     >
+                                        <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/mayorista`}>
                                         <NavDropdown.Item className="item-feature" >
-                                            <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/mayorista`}>
+                                            
                                             Mayoristas
-                                            </Link>
+                                           
                                             </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item  className="item-feature" >
-                                            <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/minorista`}>
-                                            Minoristas
                                             </Link>
+                                        <NavDropdown.Divider />
+                                        <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/minorista`}>
+                                        <NavDropdown.Item  className="item-feature" >
+                                           
+                                            Minoristas
+                                           
                                         </NavDropdown.Item>
+                                         </Link>
                                     </NavDropdown>
                              </Nav>
     
@@ -53,9 +57,12 @@ class NavBar extends Component {
                             
                         </Nav>
                     </Navbar.Collapse>
+                    <Link style={{textDecoration:'none'}} to="/cartShop">
                     <div className="container-cart-widget">
-                        <CartWidget sizeCart={this.props.sizeCart}></CartWidget >
+                        <CartWidget></CartWidget >
                     </div>
+                    </Link>
+                    
                     
                 </Container>
             </Navbar>

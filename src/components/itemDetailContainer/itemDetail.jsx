@@ -2,19 +2,17 @@ import React,{useState} from 'react';
 import ContainerAddToCart from '../Cards/ContainerAddToCart'
 
 import '../../assets/lib/sass/itemDetail.scss';
-function ItemDetail (props) {
+function ItemDetail ({pItem}) {
 
     const [itemCount,setItemCount] = useState(0);
   
     function addItem() {
       setItemCount(itemCount + 1);
-      props.setItemsCount(itemCount + 1);
   
     }
     function quitItem() {
       if(itemCount>0){
         setItemCount(itemCount - 1)
-        props.setItemsCount(itemCount - 1);
       }
     }
   
@@ -26,11 +24,11 @@ function ItemDetail (props) {
     return ( <React.Fragment>
         <div>
             <ul>
-                <li> <img src={props.image} alt={props.title} /> </li>
-                <li> {props.title} </li>
-                <li> ${props.price} </li>
-                <li> {props.desc} </li>
-                <ContainerAddToCart addItemsToCart={props.addItemsToCart} itemCount={itemCount}  quitItem={quitItem} addItem={addItem} resetItemCount={resetItemCount}   />
+                <li> <img src={pItem.image} alt={pItem.title} /> </li>
+                <li> {pItem.title} </li>
+                <li> ${pItem.price} </li>
+                <li> {pItem.desc} </li>
+                <ContainerAddToCart  itemCount={itemCount}  quitItem={quitItem} addItem={addItem} resetItemCount={resetItemCount}   />
             </ul>
         </div>
     </React.Fragment> );
