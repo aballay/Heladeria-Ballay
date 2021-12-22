@@ -17,16 +17,16 @@ function ItemDetailContainer(props) {
     const [itemDetail, setItemDetail] = useState(itemDefault);
     const { id } = useParams();
 
-
+    
     useEffect(() => {
         getItemDetail
-            .then((res) => {
-                let resFilter = res.find(x => x.id === parseInt(id));
-                setItemDetail(resFilter)
-            }).catch((bError) => {
-                alert(bError)
-            })
-    }, [])
+        .then((snapshot) => {
+            let res = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
+            let resFilter= res.find( x => x.id === id)
+            setItemDetail(resFilter)
+          })
+           
+    }, [id])
 
 
     return (<React.Fragment>

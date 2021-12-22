@@ -1,4 +1,5 @@
 import {Navbar, Nav,NavDropdown,Container} from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import '../../assets/lib/sass/NavBar.scss'
 //import librerias font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -34,21 +35,21 @@ class NavBar extends Component {
                                     title="Productos"
                                     menuVariant="dark"
                                     >
-                                        <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/mayorista`}>
+                                        <LinkContainer  className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/mayorista`}>
                                         <NavDropdown.Item className="item-feature" >
                                             
                                             Mayoristas
                                            
                                             </NavDropdown.Item>
-                                            </Link>
+                                            </LinkContainer >
                                         <NavDropdown.Divider />
-                                        <Link className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/minorista`}>
+                                        <LinkContainer  className="item-navbar" style={{ textDecoration: 'none' }} to={`/category/minorista`}>
                                         <NavDropdown.Item  className="item-feature" >
                                            
                                             Minoristas
                                            
                                         </NavDropdown.Item>
-                                         </Link>
+                                         </LinkContainer >
                                     </NavDropdown>
                              </Nav>
     

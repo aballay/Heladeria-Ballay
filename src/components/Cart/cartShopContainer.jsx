@@ -1,8 +1,7 @@
-import react, { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import CartShopList from "./cartShopList";
 import { CartContext } from "../../js/CartContex"
 import { Link } from "react-router-dom";
-import { width } from "dom-helpers";
 import "../../assets/lib/sass/CartShop.scss";
 
 function ButtonBack() {
@@ -28,13 +27,7 @@ function SuccessShoping() {
     )
 }
 
-function ButtonShop({ makePurchase }) {
-    return (
-        <>
-            <button onClick={makePurchase}>Comprar</button>
-        </>
-    )
-}
+
 function PopupsPurchase({isShopping})
 {
     console.log("isSHopping",isShopping)
@@ -70,7 +63,7 @@ function CartShopContainer() {
     useEffect(() => {
         if(!isShopping)
         cartContext.resetCart();
-    },[isShopping])
+    },[isShopping,cartContext])
 
 
     

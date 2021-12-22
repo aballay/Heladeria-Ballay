@@ -1,5 +1,3 @@
-import CartElement from "./cartElement";
-import ReactTable from "react-table";
 import { useEffect, useState, useContext} from "react";
 import { CartContext } from "../../js/CartContex";
 function CartShopList(props) {

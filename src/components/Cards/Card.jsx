@@ -1,7 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import { CartContext } from "../../js/CartContex";
 import { CardContext } from "../../js/CardContext";
 import ContainerAddToCart from "./ContainerAddToCart"
 
@@ -11,18 +10,18 @@ import "../../assets/lib/sass/Cards.scss";
 
 function CardIndividual({ itemCard }) {
 
-  const value = useContext(CartContext);
+ // const value = useContext(CartContext);
   const [itemCount, setItemCount] = useState(0);
 
   function addItem() {
     setItemCount(itemCount + 1);
-    value.setItemCounts(itemCount + 1);
+    //value.setItemCounts(itemCount + 1);
 
   }
   function quitItem() {
     if (itemCount > 0) {
       setItemCount(itemCount - 1)
-      value.setItemCounts(itemCount - 1);
+      //value.setItemCounts(itemCount - 1);
     }
   }
 

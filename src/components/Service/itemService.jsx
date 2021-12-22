@@ -1,5 +1,25 @@
+import { collection,  getDocs, getFirestore } from "firebase/firestore"
+import { initializeApp } from "firebase/app";
 
-export default  new Promise((resolve,reject) => {
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDNzRNNWZ2UPnoc7IJniY9T4-VKzkA5UWQ",
+  authDomain: "heladeria-ballay.firebaseapp.com",
+  projectId: "heladeria-ballay",
+  storageBucket: "heladeria-ballay.appspot.com",
+  messagingSenderId: "386571676654",
+  appId: "1:386571676654:web:5530a6dc545f2999f2bcff"
+};
+
+initializeApp(firebaseConfig);
+
+const db = getFirestore();
+
+const itemCollection = collection(db,"products");
+
+
+export default getDocs(itemCollection)
+/*export default  new Promise((resolve,reject) => {
   setTimeout(() => {
     resolve([
       {
@@ -87,3 +107,4 @@ export default  new Promise((resolve,reject) => {
     reject('Algo Fallo');
   }, 10000);
 });
+*/
