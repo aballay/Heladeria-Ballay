@@ -14,6 +14,7 @@ function ItemDetailContainer(props) {
         stock: 0,
     }
 
+   
     const [itemDetail, setItemDetail] = useState(itemDefault);
     const { id } = useParams();
 
@@ -31,7 +32,7 @@ function ItemDetailContainer(props) {
 
     return (<React.Fragment>
         <div className="item-detail-container">
-         <ItemDetail pItem={itemDetail} />
+         <ItemDetail   pItem={itemDetail} />
         </div>
     </React.Fragment>);
 }

@@ -10,6 +10,17 @@ function CartShopList(props) {
         justifyContent:'center'
     }
 
+    const calcTotalCost = () => {
+        let finalCost = 0;
+        let costProducts = itemsCart.map(function(item) {
+            return item.price * item.count;
+        });
+        for (let i = 0; i < costProducts.length; i++) {
+            finalCost += costProducts[i];
+        }
+       return finalCost;
+    }
+
     useEffect(() => {
         const calcTotalCost = () => {
             let finalCost = 0;
@@ -44,9 +55,11 @@ function CartShopList(props) {
                 cartContext.modifyUnityProduct(pId,mValue + param);
             }
         }
+        setTotalCost(calcTotalCost());
     }
     const DeleteUnity = (pId) => {
         cartContext.deleteItemCart(pId);
+        setTotalCost(calcTotalCost());
     }
 
    

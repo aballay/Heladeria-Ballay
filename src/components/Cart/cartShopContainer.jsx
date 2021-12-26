@@ -3,6 +3,7 @@ import CartShopList from "./cartShopList";
 import { CartContext } from "../../js/CartContex"
 import { Link } from "react-router-dom";
 import "../../assets/lib/sass/CartShop.scss";
+import { collection,  addDoc, getFirestore } from "firebase/firestore"
 
 function ButtonBack() {
     return (
@@ -12,13 +13,14 @@ function ButtonBack() {
     )
 }
 
-function SuccessShoping() {
+function SuccessShoping(props) {
     return (
         <>
             <div></div>
             <div className="ss-exit-container">
                 <div className="ss-exit-body">
                     <h3>La compra se ha realizado con exito</h3>
+                    <h5>Id de compra {props.idShop}</h5>
                     <h4>Gracias por confiar en nosotros!</h4>
                 </div>
 
@@ -28,9 +30,8 @@ function SuccessShoping() {
 }
 
 
-function PopupsPurchase({isShopping})
+function PopupsPurchase({isShopping,idShop})
 {
-    console.log("isSHopping",isShopping)
     return(
         <>
         {isShopping
@@ -38,7 +39,7 @@ function PopupsPurchase({isShopping})
                         <h2>No hay elementos en el carrito.</h2>
                     </>
                     : <>
-                        <SuccessShoping />
+                        <SuccessShoping idShop={idShop}/>
                     </>
                 }
 
@@ -46,10 +47,59 @@ function PopupsPurchase({isShopping})
     )
 }
 
+function ClientForm(props){
+
+    const [email, setInputEmail] = useState("");
+    const [name, setInputName] = useState("");
+    const [phone, setInputPhone] = useState("");
+
+    const finishShop = () =>{
+        if(email !== "" && name !== "" && phone !== ""){
+            const order = {
+                buyer: {name:name, phone:phone, email:email},
+                items:props.cartOrder,
+                total:100
+              };
+    
+              const db = getFirestore();
+    
+              const vCollection = collection(db,"orders");
+              addDoc(vCollection, order).then(({id}) => {
+                props.setIdShop(id);
+              })
+              
+              props.makePurchase();
+              setInputEmail("");
+              setInputName("");
+              setInputPhone("");
+        }
+        
+
+    }
+
+    
+
+    return (
+      <div style={{ marginTop: "10%", textAlign: "center" }}>
+        <div>Nombre:</div>
+        <input value={name} onChange={(e) => setInputName(e.target.value)} />
+        <div>Mail:</div>
+        <input value={email} onChange={(e) => setInputEmail(e.target.value)} />
+        <div>Telefono:</div>
+        <input value={phone} onChange={(e) => setInputPhone(e.target.value)} />.
+        <div></div>
+        <button onClick={() => finishShop()} >Comprar</button>
+
+      </div>
+    );
+  }
+  
+
 
 function CartShopContainer() {
     const cartContext = useContext(CartContext);
     const [isShopping, setIsShopping] = useState(true);
+    const [idShop,setIdShop] = useState(undefined);
 
     const makePurchase = () => {
         setIsShopping(false);
@@ -67,7 +117,6 @@ function CartShopContainer() {
 
 
     
-    console.log(cartContext);
     return (
         <div>
             <h1>Carrito</h1>
@@ -75,12 +124,13 @@ function CartShopContainer() {
                 {cartContext.cart.length > 0 
                     ? <>
                         <CartShopList/>
-                        <button onClick={makePurchase} >Comprar</button>
+                        <ClientForm setIdShop={setIdShop} makePurchase={makePurchase} cartOrder={cartContext.cart} />
+                        
                         <ButtonBack />
                     </>
                     : <>
 
-                    <PopupsPurchase isShopping={isShopping} />
+                    <PopupsPurchase idShop={idShop} isShopping={isShopping} />
                     <ButtonBack />
                         
                     </>

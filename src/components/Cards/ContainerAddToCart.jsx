@@ -10,10 +10,10 @@ function ContainerAddToCart(props) {
     <React.Fragment>
         <Card.Body>
         
-          <AddToCartWidget  quitItem={props.quitItem} addItem={props.addItem} itemCount={props.itemCount} />
+          <AddToCartWidget />
           
         </Card.Body>
-        <ButtonAddCart resetItemCount={props.resetItemCount} />
+        <ButtonAddCart />
 
     </React.Fragment> );
 }

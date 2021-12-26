@@ -9,9 +9,6 @@ function CountElementWidget(props) {
 }
 
 function CartElement(props) {
-
-
-    console.log(props.pItem)
     return (
 
         <div>

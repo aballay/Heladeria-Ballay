@@ -14,12 +14,13 @@ function Cards(props) {
       setTimeout(() => {
         resolve(productsContext.productFirebase);
         reject('Algo Fallo');
-      }, 2000);
+      }, 10);
     })
     handPromise
     .then( (res) => {
       if(props.categoryId !== undefined){
-        let resFilter = res.find((item) => item.category === props.categoryId);
+        let resFilter = res.filter((item) => item.category === props.categoryId);
+        console.log(resFilter)
         if(resFilter){
           setCards(resFilter);
         }else{

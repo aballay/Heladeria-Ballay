@@ -60,7 +60,7 @@ class NavBar extends Component {
                     </Navbar.Collapse>
                     <Link style={{textDecoration:'none'}} to="/cartShop">
                     <div className="container-cart-widget">
-                        <CartWidget></CartWidget >
+                        <CartWidget cartSize={this.props.cartSize}></CartWidget >
                     </div>
                     </Link>
                     
