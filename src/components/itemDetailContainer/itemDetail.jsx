@@ -12,7 +12,7 @@ function ItemDetail ({pItem}) {
     return ( <React.Fragment>
         <div  style={stylesCard}>
 
-          <Card itemCard={pItem}></Card>
+          <Card isDetail={true} itemCard={pItem}></Card>
           
         </div>
     </React.Fragment> );

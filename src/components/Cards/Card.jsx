@@ -8,7 +8,10 @@ import "../../assets/lib/sass/Cards.scss";
 
 
 
-function CardIndividual({ itemCard }) {
+function CardIndividual({ isDetail,itemCard }) {
+
+ 
+
 
  // const value = useContext(CartContext);
   const [itemCount, setItemCount] = useState(0);
@@ -38,9 +41,19 @@ function CardIndividual({ itemCard }) {
         </Link>
         <Card.Body id="card-body-container">
           <Card.Title>{itemCard.title}</Card.Title>
-          <Card.Text className="cardText">
+          <Card.Text  className="cardText">
             {itemCard.desc}
           </Card.Text>
+          {isDetail
+          ?<>
+            <div>
+            ${itemCard.price}
+            </div>
+          </>
+          :
+          <>
+          </>
+        }
         </Card.Body>
 
         <ContainerAddToCart />

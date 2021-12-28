@@ -3,7 +3,7 @@ import CardIndividual from "./Card";
 import { CardGroup } from "react-bootstrap";
 import { ProductsContext } from "../../js/ProductsContext";
 
-import "../../assets/lib/css/Cards.css";
+import "../../assets/lib/sass/Cards.scss";
 
 function Cards(props) {
   const productsContext = useContext(ProductsContext);
@@ -20,7 +20,6 @@ function Cards(props) {
     .then( (res) => {
       if(props.categoryId !== undefined){
         let resFilter = res.filter((item) => item.category === props.categoryId);
-        console.log(resFilter)
         if(resFilter){
           setCards(resFilter);
         }else{

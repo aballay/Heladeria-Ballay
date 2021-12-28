@@ -24,7 +24,11 @@ function ItemDetailContainer(props) {
         .then((snapshot) => {
             let res = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
             let resFilter= res.find( x => x.id === id)
-            setItemDetail(resFilter)
+            if(resFilter){
+                setItemDetail(resFilter)
+            }else{
+                setItemDetail(itemDefault)
+            }
           })
            
     }, [id])
